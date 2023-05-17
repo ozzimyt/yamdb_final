@@ -1,7 +1,7 @@
 from rest_framework import filters, mixins, viewsets
+from users.validators import validate_username
 
 from .permissions import IsAdminOrReadOnly
-from users.validators import validate_username
 
 
 class ListCreateDestroyGenericViewSet(

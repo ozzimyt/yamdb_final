@@ -3,12 +3,12 @@ from django.core.exceptions import ValidationError
 from django.shortcuts import get_object_or_404
 from rest_framework import serializers
 from rest_framework.validators import UniqueTogetherValidator
-
-from .validators import validate_year
-from .mixins import UsernameValidatorMixin
 from reviews.models import Category, Comment, Genre, Review, Title
 from users.models import User
 from users.validators import validate_username
+
+from .mixins import UsernameValidatorMixin
+from .validators import validate_year
 
 
 class CategorySerializer(serializers.ModelSerializer):
