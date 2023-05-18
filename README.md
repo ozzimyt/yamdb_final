@@ -63,29 +63,23 @@ DB_HOST=127.0.0.1 # ip-адресс БД
 DB_PORT=5432 # порт для подключения к БД
 ```
 
-Запустить сборку контейнера:
-
-```
-docker-compose up -d
-```
-
 Выполнить миграции:
 
 ```
-docker-compose exec web python manage.py makemigrations
+docker compose exec web python manage.py makemigrations
 ```
 ```
-docker-compose exec web python manage.py migrate
+docker compose exec web python manage.py migrate
 ```
 
 Создать суперпользователя:
 
 ```
-docker-compose exec web python manage.py createsuperuser
+docker compose exec web python manage.py createsuperuser
 ```
 
 Собрать статику в одну папку:
 
 ```
-docker-compose exec web python manage.py collectstatic --no-input
+docker compose exec web python manage.py collectstatic --no-input
 ```
